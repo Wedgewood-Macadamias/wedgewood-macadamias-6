@@ -1,0 +1,329 @@
+/* FONTS */
+@import url(../css/clash-display.css);
+
+/* VARIABLES */
+:root {
+    --c-dark: /*#212529*/ #6d5822;
+    --c-brand: /*#4e57d4*/  #198754;
+    --c-brand-light: /*#6970dd*/ #8d7434;
+    --c-brand-rgb: 78 87 212;
+    --c-body: /*#727272*/ #6d5822;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+}
+
+/* RESET & HELPERS */
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+    word-spacing: 0.15rem;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h3, .h4, .h5, .h6 {
+    font-weight: 500;
+    color: var(--c-dark);
+    word-spacing: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* NAVBAR */
+.navbar {
+    box-shadow: var(--box-shadow);
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 4.7rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+/* BTN */
+.btn {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: #fff;
+}
+
+/* HERO */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/rex-harris-view-macadamia-orchard-scaled.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#team {
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../images/Wedgewood\ Macadamia\ Group\ Team\ Picture.jpg);
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+  width: auto;
+  color: #f5f5f5;
+}
+
+#team h2 {
+  color: #f5f5f5;
+}
+
+#team .line {
+  background-color: #8d7434;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero {
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+              url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') center/cover;
+  color: white;
+}
+
+.hero h2 {
+  /* margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif; */
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 0rem;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEALTHIEST NUT */
+.benefit-points {
+    list-style: none;
+  }
+  
+  .benefit-points li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .benefit-points li:before {
+    content: "✓";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+
+  .benefit-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-image img:hover {
+    transform: scale(1.02);
+  }
+
+  /* HELPER */
+  .theme-shadow {
+    box-shadow: var(--box-shadow);
+  }
+
+  /* IMAGE ZOOM */
+  .image-zoom {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-zoom-wrapper img {
+    transition: var(--transition);
+  }
+
+  .image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+  }
+
+  /* ICONBOX */
+  .iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-rgb), 0.1);
+    color: var(--c-brand);
+    font-size: 1.5rem;
+    flex: none;
+  }
+
+  /* FEATURES */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  /* GALLERY */
+  /* .gallery-item .iconbox {
+    background-color: var(--c-brand);
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .gallery-item:hover .iconbox {
+    cursor: pointer;
+    opacity: 1;
+    top: 50%;
+  } */
+
+  /* OUR TEAM */
+  .team-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+  }
+
+  /* .team-member-content {
+    background-color: var(--c-brand);
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    width: calc(100% - 50px);
+    transform: translate(-50%);
+    padding: 24px;
+  } */
+
+  /* IN-PAGE NAVS */
+  .card-nav {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+    margin: 0 1.2rem;
+  }
+
+  .card-nav img {
+      border-radius: 50%;
+      height: 50px;
+      /* border: 0.2rem solid #93c572;
+      padding: 0.3rem; */
+  }
+
+  .card-nav a {
+    text-decoration: none;
+    color: #8d7434;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .col-lg-6 img {
+    border-radius: .8rem;
+  }
+
+  /* FOOTER */
+  .col img {
+    height: 3.5rem;
+  }
+  
+  /* RESPONSIVENESS */
+  @media (max-width: 520px) {
+    .hero-buttons {
+      display: grid;
+      grid-template-columns: 1fr;    
+    }
+  }
+  
+  @media (max-width:768px) {
+    .navbar {
+      padding-bottom: 0.6rem;
+    }
+  }
+/* 
+  .overflow {
+    overflow: hidden;
+    width: 100%;
+  } */
